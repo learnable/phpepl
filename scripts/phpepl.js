@@ -16,7 +16,6 @@
       isLiveEnv   = window.location.host === 'phpepl.cloudcontrolled.com',
       evalURL     = isLiveEnv ? live : devUnsafe,
 
-      mixpanel    = window.mixpanel || {},
       editor;
 
   // HELPERS
@@ -105,9 +104,6 @@
 
         $('.spinner').fadeIn('fast');
 
-        // Track it
-        mixpanel.track('Code Run', {'code': code});
-
         sendingCode(code)
           .done(function (res) {
             if (! res) return;
@@ -140,7 +136,6 @@
 
             setOutput(textLine[0], true);
             showLineError(textLine[1]);
-            mixpanel.track('Error', {'error' : error.responseText});
           });
       };
 
@@ -156,7 +151,6 @@
             .find('span')
               .html('Code Saved!');
 
-          mixpanel.track('Code Saved');
         }
       },
       loadSavedCode = function () {
@@ -195,7 +189,6 @@
     if (e.which === 83 && (e.ctrlKey || e.metaKey)) {
       saveCode();
       e.preventDefault();
-      mixpanel.track('Save Shortcut');
     }
   });
 
