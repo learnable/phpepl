@@ -11,12 +11,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/fieryprophet/php-sandbox.git",
-                "reference": "f99b21983de27043690d717a7fa8d4f29f5f3ec3"
+                "reference": "a61709720541d2c73071528b0ea84b0520f7d7a8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fieryprophet/php-sandbox/zipball/f99b21983de27043690d717a7fa8d4f29f5f3ec3",
-                "reference": "f99b21983de27043690d717a7fa8d4f29f5f3ec3",
+                "url": "https://api.github.com/repos/fieryprophet/php-sandbox/zipball/a61709720541d2c73071528b0ea84b0520f7d7a8",
+                "reference": "a61709720541d2c73071528b0ea84b0520f7d7a8",
                 "shasum": ""
             },
             "require": {
@@ -34,7 +34,7 @@
                     "PHPSandbox": "src/"
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -52,7 +52,7 @@
                 "sandbox",
                 "whitelist"
             ],
-            "time": "2013-10-16 21:14:52"
+            "time": "2013-12-11 16:11:16"
         },
         {
             "name": "jeremeamia/FunctionParser",
@@ -60,12 +60,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/jeremeamia/FunctionParser.git",
-                "reference": "1068f0a5e62ca361652d6c9bc8a6d1817efe62bf"
+                "reference": "9e1ea101f2680dcce65c338bba76dac380d921c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jeremeamia/FunctionParser/zipball/1068f0a5e62ca361652d6c9bc8a6d1817efe62bf",
-                "reference": "1068f0a5e62ca361652d6c9bc8a6d1817efe62bf",
+                "url": "https://api.github.com/repos/jeremeamia/FunctionParser/zipball/9e1ea101f2680dcce65c338bba76dac380d921c6",
+                "reference": "9e1ea101f2680dcce65c338bba76dac380d921c6",
                 "shasum": ""
             },
             "require": {
@@ -77,7 +77,7 @@
                     "FunctionParser": "src/"
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -94,7 +94,7 @@
                 "parser",
                 "tokenizer"
             ],
-            "time": "2012-03-19 17:15:54"
+            "time": "2014-01-14 23:32:26"
         },
         {
             "name": "nikic/php-parser",
@@ -102,12 +102,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "700847e2951942200b479c413aa2984b5364799b"
+                "reference": "6f36a88993a07d0ccd52d813ceff27de022429c3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/700847e2951942200b479c413aa2984b5364799b",
-                "reference": "700847e2951942200b479c413aa2984b5364799b",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/6f36a88993a07d0ccd52d813ceff27de022429c3",
+                "reference": "6f36a88993a07d0ccd52d813ceff27de022429c3",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,7 @@
                     "PHPParser": "lib/"
                 }
             },
-            "notification-url": "http://packagist.org/downloads/",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -139,7 +139,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2013-09-28 11:21:30"
+            "time": "2014-01-24 19:27:42"
         }
     ],
     "packages-dev": [
