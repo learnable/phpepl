@@ -73,19 +73,11 @@ function getJsonOutput($options) {
 // Handler that executes on script completion
 function on_script_finish() {
   // http://stackoverflow.com/a/2146171/700897
-  $errfile = "unknown file";
-  $errstr  = "shutdown";
-  $errno   = E_CORE_ERROR;
-  $errline = 0;
-
   $result = ob_get_clean();
   $error = error_get_last();
 
-  if ($error !== NULL) {
-    $errno   = $error["type"];
-    $errfile = $error["file"];
-    $errline = $error["line"];
-    $errstr  = $error["message"];
+  if ($error !== NULL && strpos($error["message"], 'undefinedVariable') !== false) {
+    $error = NULL;
   }
 
   echo getJsonOutput(array('result' => $result, 'error' => $error));
