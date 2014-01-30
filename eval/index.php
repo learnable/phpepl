@@ -41,11 +41,8 @@ $blackList  = array("phpinfo", "file_get_contents", "exec", "passthru",
           "get_meta_tags"
       );
 
-$whiteList = array('print_r', 'preg_match', 'preg_replace', 'preg_match_all');
-
 $sandbox = new \PHPSandbox\PHPSandbox();
 $sandbox->blacklist_func($blackList);
-// $sandbox->whitelist_func($whiteList);
 $sandbox->allow_functions = true;
 $sandbox->allow_closures = true;
 $sandbox->allow_constants = true;
