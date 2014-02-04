@@ -1,5 +1,5 @@
 <?php
-require_once('../vendor/autoload.php');
+require_once(dirname(__FILE__) . '/../../vendor/autoload.php');
 
 // Turn off errors since eval will throw them on invalid syntax
 $inString = @ini_set('log_errors', false);
