@@ -52,33 +52,26 @@ $sandbox->allow_casting = true;
 $sandbox->allow_classes = true;
 $sandbox->error_level = false;
 
-// Brilliant method for even catching fatal_errors
-register_shutdown_function("on_script_finish");
-
 // Output buffering to catch the results and errors
 ob_start();
-
-$sandbox->execute($code);
+$result = NULL; $error = [];
+try {
+  $sandbox->execute($code);
+} catch (Exception $e) {
+  $error['message'] = $e->getPrevious()->getRawMessage();
+  $error['line'] = $e->getPrevious()->getRawLine();
+}
 
 @ini_set('display_errors', $token);
 @ini_set('log_errors', $inString);
+
+$result = ob_get_clean();
+
+echo getJsonOutput(array('result' => $result, 'error' => $error));
 
 // Helper for constructing a response
 function getJsonOutput($options) {
   $result = isset($options['result']) ? $options['result']: '';
   $error  = isset($options['error']) ? $options['error'] : '';
   return json_encode(array("result" => $result, "error" => $error));
-}
-
-// Handler that executes on script completion
-function on_script_finish() {
-  // http://stackoverflow.com/a/2146171/700897
-  $result = ob_get_clean();
-  $error = error_get_last();
-
-  if ($error !== NULL && strpos($error["message"], 'undefinedVariable') !== false) {
-    $error = NULL;
-  }
-
-  echo getJsonOutput(array('result' => $result, 'error' => $error));
 }
