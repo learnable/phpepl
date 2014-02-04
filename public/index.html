@@ -4,49 +4,17 @@
   <meta charset="UTF-8">
   <title>PHPepl</title>
 </head>
-<style type="text/css" media="screen">
-  .ace_editor {
-    position: relative !important;
-    border: 1px solid lightgray;
-    margin: auto;
-    height: 500px;
-    width: 90%;
-  }
-
-  .ace_editor.fullScreen {
-    height: auto;
-    width: auto;
-    border: 0;
-    margin: 0;
-    position: fixed !important;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 10;
-    background: white;
-  }
-
-  .fullScreen {
-    overflow: hidden;
-  }
-
-  #output {
-    margin: auto;
-    width:90%;
-    height:300px;
-    border:1px solid lightgray;
-    overflow: auto;
-  }
-
-  </style>
+<link rel="stylesheet" href="css/foundation.css" />
+<link rel="stylesheet" href="css/style-ace.css" />
 </head>
 <body>
 
-<pre id="editor"></pre>
-<pre id="output"></pre>
-<button class="run">Run</button>
-    
+<div class="content">
+  <pre id="editor"></pre>
+  <pre id="output"></pre>
+  <button class="small radius run">Run</button>
+</div>
+
 <script src="lib/ace-builds/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="scripts/phpepl-ace.js"></script>
