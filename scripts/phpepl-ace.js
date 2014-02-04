@@ -90,7 +90,7 @@
               error     = res.error,
               errorMsg  = '';
 
-          if (error) {
+          if (error.length != 0) {
             if (error.line && error.message) {
               // Show the line in red
               showLineError(error.line);
