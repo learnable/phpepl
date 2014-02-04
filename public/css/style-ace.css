@@ -1,9 +1,12 @@
+.content {
+  margin: auto;
+  width: 90%;  
+}
+
 .ace_editor {
   position: relative !important;
   border: 1px solid lightgray;
-  margin: auto;
   height: 500px;
-  width: 90%;
 }
 
 .ace_editor.fullScreen {
@@ -25,9 +28,11 @@
 }
 
 #output {
-  margin: auto;
-  width:90%;
   height:300px;
   border:1px solid lightgray;
   overflow: auto;
+}
+
+button.run {
+  border-bottom: 2px solid #2285a2;
 }
