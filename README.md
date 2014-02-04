@@ -27,9 +27,14 @@ To serve this application locally, you'll need a web server and PHP:
 * Mac: [MAMP](http://www.mamp.info/en/index.html)
 * Windows: [WAMP](http://www.wampserver.com/en/)
 
-You can then point your apache server to serve files from the `/phpepl` root folder
+### Composer install
 
-* Namely, you should be able to visit the app (`/phpepl/index.html`) from `http://localhost` (include a custom port if necessary)
+    cd phpepl
+    php composer.phar install
+
+You can then point your apache server to serve files from the `/phpepl/public` root folder
+
+* Namely, you should be able to visit the app (`/phpepl/public/index.html`) from `http://localhost` (include a custom port if necessary)
 
 The app will automatically disable the sandbox and give you free reign over the REPL to
 execute any commands.
