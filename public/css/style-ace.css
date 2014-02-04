@@ -31,6 +31,9 @@
   height:300px;
   border:1px solid lightgray;
   overflow: auto;
+  font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
+  font-size: .8em;
+  color:#333;
 }
 
 button.run {
