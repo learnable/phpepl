@@ -59,17 +59,9 @@
       return [text, lineNum];
     },
 
-    // Highlights the line in the gutter with the error
+    // Navigate to the line with the error
     showLineError = function (line) {
-      // Find the dom element in the gutter
-      $('.CodeMirror-linenumber').each(function () {
-        // If the cell's line number matches the error line
-        if (Number($(this).html()) === line) {
-          // Make the background red
-          $(this).addClass('error-gutter');
-          return;
-        }
-      });
+      editor.gotoLine(line, 0, true);
     },
 
     // Handles the sending of the code to the eval server
