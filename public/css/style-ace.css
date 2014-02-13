@@ -1,12 +1,13 @@
 .content {
   margin: auto;
-  width: 90%;  
+  width: 90%;
+  height:90vh;
 }
 
 .ace_editor {
   position: relative !important;
   border: 1px solid lightgray;
-  height: 500px;
+  height: 65%;
 }
 
 .ace_editor.fullScreen {
@@ -28,7 +29,7 @@
 }
 
 #output {
-  height:300px;
+  height:25%;
   border:1px solid lightgray;
   overflow: auto;
   font-family: Monaco, Menlo, 'Ubuntu Mono', Consolas, source-code-pro, monospace;
