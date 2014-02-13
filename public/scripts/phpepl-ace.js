@@ -64,6 +64,11 @@
       editor.gotoLine(line, 0, true);
     },
 
+    // Navigate to a particular function name that has an error
+    showFunctionError = function (name) {
+      editor.find(name);
+    },
+
     // Handles the sending of the code to the eval server
     processCode = function () {
       var code = editor.getValue();
@@ -88,6 +93,8 @@
 
               // Show the error message
               errorMsg = 'Line ' + error.line + ': ';
+            } else if (error.function) {
+              showFunctionError(error.function);
             }
 
             errorMsg += error.message;

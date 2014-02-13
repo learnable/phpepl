@@ -65,7 +65,11 @@ try {
   } else {
     // Used a blacklisted function
     $error['message'] = $e->getMessage();
-    $error['line'] = $e->getNode()->getLine();
+    if ($e->getNode() === NULL) {
+      $error['function'] = $e->getData();
+    } else {
+      $error['line'] = $e->getNode()->getLine();
+    }
   }
 }
 
