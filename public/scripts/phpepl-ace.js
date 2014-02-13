@@ -75,7 +75,6 @@
 
       sendingCode(code)
         .done(function (res) {
-          console.log(res);
           if (! res) return;
 
           var result    = res.result,
