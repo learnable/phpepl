@@ -58,8 +58,15 @@ $result = NULL; $error = [];
 try {
   $sandbox->execute($code);
 } catch (Exception $e) {
-  $error['message'] = $e->getPrevious()->getRawMessage();
-  $error['line'] = $e->getPrevious()->getRawLine();
+  if ($e->getPrevious() !== NULL) {
+    // A regular error
+    $error['message'] = $e->getPrevious()->getRawMessage();
+    $error['line'] = $e->getPrevious()->getRawLine();
+  } else {
+    // Used a blacklisted function
+    $error['message'] = $e->getMessage();
+    $error['line'] = $e->getNode()->getLine();
+  }
 }
 
 @ini_set('display_errors', $token);
