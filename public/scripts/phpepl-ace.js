@@ -84,7 +84,7 @@
 
           if (error.length != 0) {
             if (error.line && error.message) {
-              // Show the line in red
+              // Highlight the error line
               showLineError(error.line);
 
               // Show the error message
