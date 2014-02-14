@@ -12,6 +12,10 @@ header("Content-type: application/json");
 // No need for the open and close php tags
 $toRemove   = array("<?php", "?>", "<?");
 
+if (!$_SERVER['REQUEST_METHOD'] === 'POST' || !array_key_exists('code', $_POST) || !is_string($_POST['code'])) {
+  exit;
+}
+
 $code = $_POST['code'];
 $code = str_replace($toRemove, "", $code);
 
