@@ -25,9 +25,6 @@ You can then point your apache server to serve files from the `/phpepl/public` r
 
 * Namely, you should be able to visit the app (`/phpepl/public/index.html`) from `http://localhost` (include a custom port if necessary)
 
-The app will automatically disable the sandbox and give you free reign over the REPL to
-execute any commands.
-
 ### License
 
 [MIT](LICENSE)
